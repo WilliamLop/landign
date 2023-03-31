@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap');
+
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    font-size: .96em;
+}
+figure{
+    margin: 0;
+}
+
+/* Estilo el header */
+
+.header{
+    width: 100%;
+    position: fixed;
+    background: white;
+    border: 1px solid rgba(77, 77, 77, 0.219);
+    padding: .5rem 0;
+    animation: opacity 1s ease-in;
+    top: 0;
+    z-index: 100;
+    transition: .50s ease-in;
+
+
+}
+
+/* Estilo el nav de mi header */
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+/* Ingreso a darle estilo a mi logo */
+
+.header__logo{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    animation: escala .6s ease-in;
+
+}
+
+/* Ingreso a darle estilo a mi navegacion ul */
+.nav__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+    clip-path: circle(0.0% at 100% 0);
+    transition: .5s ease-in-out;
+    background-color: white;
+}
+
+/* Agrego capa para js */
+.capa_menu{
+    clip-path: circle(150% at 100% 0);
+}
+
+.box-model{
+    z-index: 2;
+    color: black;
+}
+
+/* Agrego estilo a los items */
+
+.item__link{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    padding: .2rem .3rem;
+    border-radius: .3rem;
+    color: black;
+}
+
+.nav__item{
+    width: 100%;
+    text-align:center;
+    padding: .5rem 0;
+    font-weight: 500;
+}
+
+/* Estilo main */
+
+.main::before{
+    content: "";
+    display: block;
+    margin-bottom: 5rem;
+}
+
+main{
+    width: 100%;
+    margin: auto;
+}
+
+/* Estilo welcome__section primera seccion del main */
+.welcome__section{
+    width: 90%;
+    margin: 2rem auto;
+    max-width: 1800px;
+    animation: opacity 1s ease-in;
+}
+
+.title{
+    font-size: 2.4em;
+    max-width: 720px;
+    text-align: center;
+    margin: 0 auto;
+    animation: opacity 1.5s ease-in;
+    font-weight: 500;
+}
+
+.description{
+    max-width: 580px;
+    font-size: .9em;
+    text-align: center;
+    margin: 0 auto;
+    animation: opacity 1.3s ease-in;
+    color: #4b4b4b;
+    padding-bottom: 1rem;
+}
+
+.welcome__img img{
+    width: 100%;
+    max-width: 800px;
+    animation: escala .6s ease-in;
+    max-height: 450px;
+}
+
+.welcome__link{
+    background-color: #0077b6;
+    display: block;
+    width: 35%;
+    margin: auto;
+    text-align: center;
+    padding: .5rem 0;
+    border-radius: .6rem;
+    color: white;
+    text-decoration: none;
+    transition: .50s ease-in;
+    margin-bottom: 2rem;
+
+}
+
+.welcome__link:hover{
+    animation: btnlink .6s ease-in forwards;
+    /* background: linear-gradient(to right, #36d1dc, #5b86e5); */
+
+}
+
+/* Estilo mi segunda seccion de servicios */
+.content__services{
+    max-width: 1550px;
+    margin: 3rem auto;
+
+}
+
+.services__title{
+    font-size: 2em;
+    text-align: center;
+    font-weight: 500;
+    animation: opacity 1.4s ease-in;
+
+}
+
+.cards__grid{
+    box-sizing: border-box;
+    display: grid;
+    gap: 1.5rem;
+    width: 90%;
+    margin: auto;
+    animation: opacity 1.3s ease-in;
+
+}
+
+.content__card{
+    padding: 2rem 1.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: .5rem;
+    background-color: white;
+    cursor: pointer;
+    transition: .50s ease;
+}
+
+.content__card:hover{
+    filter: drop-shadow(2px 2px 4px #ced4da);
+}
+.card__text{
+    font-size: .85em;
+    color: #4b4b4b;
+}
+.card__title{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.link{
+    display: flex;
+    align-items: center;
+    width: 120px;
+    text-decoration: none;
+    color: #4b4b4b;
+    font-weight: 500;
+    padding: .4rem 0 .4rem .9rem;
+    background: white;
+    border-radius: 0 .5rem .5rem 0;
+    animation: colors 2s ease-in infinite;
+}
+
+.link:hover{
+    border-radius: 0 .5rem .5rem 0;
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    color: white;
+    padding: .4rem 0 .4rem .4rem;
+    animation: escalabtns .6s ease-in forwards;
+}
+
+.card__icon{
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    color: white;
+    padding: .7rem;
+    border-radius: 50%;
+    animation: icons 5s ease-in-out infinite;
+}
+
+/* Estilo la cuarta sección */
+
+
+
+.content__results{
+    width: 100%;
+    background: linear-gradient(to right, #56ccf2, #2f80ed); 
+    animation: opacity 1.3s ease-in;
+    margin-top: 3rem;
+
+
+}
+
+.content__numbers{
+    display: grid;
+    gap: 1rem;
+}
+
+.card__results{
+    padding: 1.5rem 0;
+    width: 90%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.card__number{
+    background-color: rgba(255, 255, 255, 0.267);
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+}
+
+.number__text{
+    display: block;
+    font-size:2.3em;
+    margin: 1rem 0 0 0 ;
+    color: white;
+}
+
+.number__description{
+    color: #292929;
+    font-size: .9em;
+}
+
+
+.info__text{
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+.info__description{
+    text-align:center;
+    font-size: .9em;    
+    color: #292929;
+    
+}
+
+.info__link{
+    background: linear-gradient(to right, #2f80ed, #56ccf2); 
+    display: block;
+    width: 35%;
+    margin: auto;
+    text-align: center;
+    padding: .5rem 0;
+    border-radius: .6rem;
+    color: white;
+    text-decoration: none;
+    transition: .50s ease-in;
+}
+
+.info__link:hover{
+    transition: .5s ease-in;
+    background-color: white;
+}
+
+/* Agrego keyframes para animar la pagina */
+
+/* Keyframe de btn */
+@keyframes btnlink {
+    0%{transform: scale(.8);
+    background-color: #0077b6;
+
+    }
+    100%{transform: scale(1);
+        background: linear-gradient(to right, #36d1dc, #5b86e5);
+        filter: drop-shadow(2px 2px 4px #669bbc);
+
+    }
+    
+}
+
+/* Keyframe de escala para btns */
+@keyframes escalabtns {
+    0%{
+        opacity: .7;
+        transform: scale(0.8);
+    }
+    
+    100%{
+        padding-left: 1rem;
+        opacity: 1;
+        transition: .50s ease-in;
+        transform: scale(1);
+        filter: drop-shadow(2px 2px 4px #669bbc);
+
+
+    }
+    
+}
+
+
+/* Keyframe fondo iconos */
+@keyframes icons{
+    0%{
+        background-position: 0 25%;
+        background: linear-gradient(to right, #36d1dc, #5b86e5);
+        filter: drop-shadow(1px 1px 5px #669bbc);
+
+    }
+    25%{
+        background-position: 25 67%;
+        background: linear-gradient(45deg, #5b86e5, #36d1dc);
+        filter: drop-shadow(1px 1px 2px #5b86e5);
+
+    }
+
+    67%{
+        background-position:67% 100%;
+
+        background: linear-gradient(to right, #5b86e5, #36d1dc);
+
+
+    }
+
+    100%{
+        background-position:100% 100%;
+        filter: drop-shadow(1px 1px 4px #5b86e5);
+        background: linear-gradient(45deg, #36d1dc, #5b86e5);
+
+
+    }
+    
+}
+
+/* Keyframe colors filtros btns */
+
+@keyframes colors {
+    0%{
+        filter: drop-shadow(1px 1px 1px #36d1dc);
+
+    }
+    25%{
+        transition: 2s ease-in;
+
+        filter: drop-shadow(1px 1px 3px #5b86e5);
+
+    }
+    50%{
+        transition: 2s ease-in;
+
+        filter: drop-shadow(1px 1px 1px #36d1dc);
+
+    }
+    75%{
+        transition: 2s ease-in;
+
+        filter: drop-shadow(1px 1px 1px #5b86e5);
+
+    }
+    
+    100%{
+        transition: 2s ease-in;
+        filter: drop-shadow(1px 1px 1px #36d1dc);
+
+
+    }
+    
+}
+/* Keyframe de escala para imagenes */
+@keyframes escala {
+    0%{
+        transform: scale(0);
+    }
+    
+    100%{
+        transform: scale(1);
+
+    }
+    
+}
+
+/* Keyframe de opacidad para contendores y texto */
+
+@keyframes opacity {
+    0%{opacity: 0;
+    }
+    
+    100%{
+        transition: .50s ease-in;
+        opacity: 1;
+    }
+    
+}
+
+/* Keyframe de hover para links de navegacion */
+@keyframes hoverlinks {
+    0%{
+        border-left: 1px solid #1d3557;
+    }
+    
+    100%{
+        color: white;
+
+        border-left: 2px solid black;
+        background: #007991;  /* fallback for old browsers */
+        background: linear-gradient(to right, #00b4db, #0083b0);
+        opacity: 1;
+    }
+    
+}
+
+
+/* Agrego mediaQuery para tablet y desktop */
+
+@media (min-width: 48rem){
+    /* Estilo media para el header */
+    
+    .nav__list{
+        position: static;
+        height: auto;
+        width: 50%;
+        clip-path: none;
+        flex-direction: row;
+        background-color: white;
+        gap: 1rem;
+    }
+
+    .nav__item{
+        width: 100px;
+        text-align: right;
+    }
+    .nav__item .item__link{
+        /* padding: .2rem .3rem; */
+        transition: .8s ease-in-out;
+        
+    }
+    
+    .nav__item .item__link:hover{
+        animation: hoverlinks .5s ease forwards;
+        padding: .2rem .3rem;
+        border-radius: 0rem .5rem .5rem 0;
+    }
+    .box-model{
+        display: none;
+    }
+
+    /* Estilo main */
+
+    /* Estilo welcome__section */
+    .flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 1rem;
+    }
+    .title{
+        text-align: left;
+        margin: 0;
+    }
+    .description{
+        text-align: left;
+        margin: 0;
+    }
+
+    /* Estilo la segunda sección de mi contenido web, services */
+    
+    .cards__grid{
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+        gap: 2rem 1.5rem;
+    }
+
+    
+    
+    .welcome__link{
+        width: 30%;
+        margin: 0;
+        padding: .5rem 0;
+        border-radius: .6rem;
+    }
+
+    /* Estilo la cuarta seccion de mi contenido web, jobs */
+    
+    .card__results{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+        gap: 2rem;
+    
+    }
+    
+    .content__numbers{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
